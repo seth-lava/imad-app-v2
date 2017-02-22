@@ -10,8 +10,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article', function(req,res){
-    res.send('Article is to be printed here');
-    //res.sendFile(path.join(__dirname, 'ui','article.html'));
+   // res.send('Article is to be printed here');
+    res.sendFile(path.join(__dirname, 'ui','article.html'));
 });
 
 app.get('/magic' , function(req,res){
