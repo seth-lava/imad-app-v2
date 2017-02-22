@@ -9,8 +9,59 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var obj={
+    
+  heading : 'Hey this is for article use' ,
+  
+  title   :  'Article |lav' ,
+  content : `
+            <p>
+                This page is meant for article.This page is meant for article.This page is meant for article.
+                This page is meant for article.This page is meant for article.This page is meant for article.
+                This page is meant for article.This page is meant for article.This page is meant for article.
+            </p>`
+};
+
+
+
+function createTemp(data){
+    var title= data.title;
+    var head= data.head;
+    var content=data.content;
+    
+    var result= `<html>
+    <head>
+        <title>${title}</title>
+        <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+
+<body>
+<div align="center" class="conatiner">    
+        <div>
+            <h1> ${head}</h1>
+            <hr/>
+            
+        </div>
+        <div>
+            <a href="\"> Click here to go back</a>
+        </div>
+        
+        <div>
+           ${content}
+           </div>
+</div>    
+</body>    
+</html>`;
+}
+
+
+
+
+
+
+
 app.get('/article', function(req,res){
-   res.sendFile(path.join(__dirname, 'ui','article.html'));
+   res.send(createTemp(article));
 });
 
 app.get('/magic' , function(req,res){
