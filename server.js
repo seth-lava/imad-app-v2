@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 app.get('/article', function(res){
     //res.send('Article is to be printed here');
-    res.sendFile(path.join(__diename, 'ui','article.html'));
+    res.sendFile(path.join(__dirname, 'ui','article.html'));
 });
 
 app.get('/magic' , function(req,res){
