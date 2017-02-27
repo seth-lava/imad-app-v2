@@ -43,7 +43,7 @@ function createTemp(data){
             
         </div>
         <div>
-            <a href="\"> Click here to go back</a>
+            <a href="/"> Click here to go back</a>
         </div>
         
         <div>
