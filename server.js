@@ -59,7 +59,7 @@ return result;
 
 
 
-app.get('/', function (req, res) {
+app.get('/userlist', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'userlist.html'));
 });
 
