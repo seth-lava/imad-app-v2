@@ -59,7 +59,9 @@ return result;
 
 
 
-
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'userlist.html'));
+});
 
 app.get('/article', function(req,res){
    res.send(createTemp(article));
